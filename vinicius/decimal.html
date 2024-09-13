@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div id="header">
+                <div id="area-logo">
+                        <h1>Numeric Systems Converter v1</h1>
+                </div>
+                <div id="area-menu">
+                        <a href="decimal.html">Decimal</a>
+                        <a href="binario.html">Binário</a>
+                        <a href="octal.html">Octal</a>
+                        <a href="hexadecimal.html">Hexadecimal</a>
+                </div>
+        </div>
+        <div class="container" id="decimal">
+                <h3>Decimal</h3>
+                <h2>Digite o valor</h2>
+                <input id="ipt_valorDecimal" type="number" placeholder="Digite o valor">
+                <h3>converter para:</h3>
+                <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
+                <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 40px; font-weight: 500;"
+                        id="div_octal"></div>
+                <input onclick="aparecer_hexa()" type="checkbox"><b>Hexadecimal</b>
+                <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 40px; font-weight: 500;"
+                        id="div_hexadecimal"></div>
+                <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
+                <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 60%; height: 50px; font-weight: 500;"
+                        id="div_binario"></div>
+                <button onclick="converter()">Converter</button>
+        </div>
+        <script>
+                function converter() {
+                        var valorInputDecimal = ipt_valorDecimal.value;
+                        // Verificação de valor vazio
+                        if (valorInputDecimal != "") {
+                                valorInputDecimal = Number(valorInputDecimal);
+                                var octal = valorInputDecimal.toString(8);
+                                var binario = valorInputDecimal.toString(2);
+                                var hexadecimal = valorInputDecimal.toString(16);
+
+                                // Saída
+                                div_octal.innerHTML = `${octal}`;
+                                div_hexadecimal.innerHTML = `${hexadecimal}`;
+                                div_binario.innerHTML = `${binario}`;
+                        } else {
+                                alert("Preencha o valor decimal!")
+                        }
+                }
+
+                function aparecer_bin() {
+                        div_binario.style.display = 'block'
+                }
+
+                function aparecer_hexa() {
+                        div_hexadecimal.style.display = 'block'
+                }
+
+                function aparecer_octal() {
+                        div_octal.style.display = "block";
+                }
+        </script>
+</body>
+
+</html>
