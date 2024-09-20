@@ -123,7 +123,7 @@ function analisarDecimal() {
             <b>Valor Decimal:</b> ${valor_decimal} <br>
             <b>Valor Binário:</b> ${binario} <br>
             <b>Valor Octal:</b> ${octal} <br>
-            <b>Valor Hexadecimal:</b> ${hexadecimal} <br>
+            <b>Valor Hexadecimal:</b> ${hexadecimal.toUpperCase()} <br>
         </div>`;
 }
 
@@ -143,7 +143,7 @@ function analisarBinario() {
             <b>Valor Binário:</b> ${valor_binario} <br>
             <b>Valor Decimal:</b> ${decimal} <br>
             <b>Valor Octal:</b> ${octal} <br>
-            <b>Valor Hexadecimal:</b> ${hexadecimal} <br>
+            <b>Valor Hexadecimal:</b> ${hexadecimal.toUpperCase()} <br>
         </div>`;
 }
 function analisarOctal() {
@@ -161,7 +161,7 @@ function analisarOctal() {
             <b>Valor Octal:</b> ${valor_octal} <br>
             <b>Valor Decimal:</b> ${decimal} <br>
             <b>Valor Binário:</b> ${binario} <br>
-            <b>Valor Hexadecimal:</b> ${hexadecimal} <br>
+            <b>Valor Hexadecimal:</b> ${hexadecimal.toUpperCase()} <br>
         </div>`;
 }
 

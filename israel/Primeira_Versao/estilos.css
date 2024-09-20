@@ -196,7 +196,6 @@ div.visor {
 .monitor {
     margin-top: 10vh;
     margin-bottom: 10vh;
-    height: 80vh;
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -209,6 +208,7 @@ div.visor {
     font-size: 1.5vw;
     padding-left: 2vw;
     padding-top: 2vh;
+    padding-bottom: 4vh;
 }
 .subtitulo {
     margin-top: 5vw;
