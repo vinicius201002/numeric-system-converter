@@ -1,0 +1,217 @@
+body {
+    font-family: 'Gill Sans MT';
+    background-color: #0d1015;
+    background-image: url(Img/bgSistema.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul.menu {
+    display: flex;
+    list-style: none;
+    padding-left: 40vw;
+    justify-content: center;
+    margin-top: 4vh;
+}
+li.itemMenu {
+    display: block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    
+}
+a.linkMenu {
+    text-decoration: none;
+    margin-top:1vh;
+    color: white;
+    font-weight: bold;
+    transition: all .55s ease;
+
+}
+a.linkMenu:hover {
+    transform: translateY(-1vh);
+}
+h1.tituloIndex {
+    color: white;
+    margin-top: 20vh;
+    font-size: 3vw;
+}
+h1.tituloConversores {
+    color: white;
+    margin-top: 3vh;
+    font-size: 2vw;
+}
+.corpo {
+    text-align: center;
+}
+button.espacoBotoes {
+    display: flex;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-width: 0.1vw;
+    border-style: solid;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 0.5vw;
+    margin-top: 2vh;
+}
+.containerBotoes {
+    margin-top: 3vh;
+}
+.botoes_hexadecimais {
+    height: 7vh;
+    width: 7.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-bottom: 2vh;
+    border-radius: 1vw;
+    border-style: none;
+    font-size: 2vw;
+    font-weight: bold;
+}
+.botoes_decimais {
+    height: 11vh;
+    width: 7.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-bottom: 2vh;
+    border-radius: 1vw;
+    border-style: none;
+    font-size: 2vw;
+    font-weight: bold;
+}
+.botoes_binarios {
+    height: 25vh;
+    width: 12vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-bottom: 2vh;
+    border-radius: 1vw;
+    border-style: none;
+    font-size: 2vw;
+    font-weight: bold;
+}
+.numeros{
+    background-color: #797474;
+    color: #21222b;
+}
+.numeros:hover{
+    background-color: #66687a;
+    color: #21222b;
+}
+.botoes_hexadecimais:active{
+    height: 6.5vh;
+    width: 7.49vw;
+}
+.botoes_decimais:active{
+    height: 10vh;
+    width: 7.49vw;
+}
+
+.confere_binarios{
+    height: 25vh;
+    width: 12vw;
+    background-color: #93cf87;
+    color: #29741a;
+}
+.confere_binarios:active{
+    height: 24vh;
+    width: 12vw;
+    background-color: #368b25;
+    color: #9ce28e;
+}
+.confere_octais{
+    height: 12vh;
+    width: 25vw;
+    background-color: #93cf87;
+    color: #29741a;
+}
+.confere_octais:active{
+    height: 11vh;
+    width: 25vw;
+    background-color: #368b25;
+    color: #9ce28e;
+}
+.confere{
+    background-color: #93cf87;
+    color: #29741a;
+}
+.confere:hover{
+    background-color: #368b25;
+    color: #9ce28e;
+}
+.excluir{
+    background-color: #ff7777;
+    color: #a81515;
+}
+.excluir:hover{
+    background-color: #a81515;
+    color: #ff7777;
+}
+.excluir_binarios{
+    height: 25vh;
+    width: 12vw;
+    background-color: #ff7777;
+    color: #a81515;
+}
+.excluir_binarios:active{
+    height: 24vh;
+    width: 12vw;
+    background-color: #a81515;
+    color: #ff7777;
+}
+
+div.conversorhexadecimal {
+    margin-top: 5vh;
+    height: 77vh;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #21222b;
+    border-width: 1vw;
+    border-color: white;
+    border-radius: 2vw;
+
+}
+div.containerVisor{
+    display: flex;
+}
+div.visor {
+    margin-top: 3vh;
+    height: 12vh;
+    width: 26vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(162, 163, 170);
+    border-width: 1vw;
+    border-color: white;
+    border-radius: 0.5vw;
+    text-align: right;
+    overflow: hidden;
+    font-size: 4vw;
+    direction: rtl;
+    line-height: 12vh;
+    vertical-align: middle;
+
+}
+.monitor {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(162, 163, 170);
+    border-width: 1vw;
+    border-radius: 0.5vw;
+    border-width: 1vw;
+    border-color: rgb(53, 52, 52);
+    border-style: solid;
+    font-size: 1.5vw;
+    padding-left: 2vw;
+    padding-top: 2vh;
+}
+.subtitulo {
+    margin-top: 5vw;
+    color: #fff;
+    font-size: 1vw;
+}
