@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência da Conversão - Sherlock Holmes</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .artigo {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            grid-column: span 2; 
+            font-size: 2.5em;
+            font-family: 'Georgia', serif;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .resultado input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ciência da Conversão</h1>
+    <h2>Um Método de Dedução Numérica</h2>
+
+    <div class="container">
+        <div class="entrada">
+            <p>Digite um número para decifrar sua conversão:</p>
+            <input id="entrada" placeholder="Digite um número" type="text" />
+            <p>Selecione a base da entrada:</p>
+            <select id="base">
+                <option selected value="decimal">Decimal</option>
+                <option value="octal">Octal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+                <option value="binario">Binário</option>
+            </select>
+            <button onclick="converter()">Converter</button>
+        </div>
+        <div class="resultado">
+            <p>Resultados da Dedução:</p>
+            <p>Decimal</p>
+            <input id="resultadoDecimal" type="text" disabled />
+            <p>Octal</p>
+            <input id="resultadoOctal" type="text" disabled />
+            <p>Binário</p>
+            <input id="resultadoBinario" type="text" disabled />
+            <p>Hexadecimal</p>
+            <input id="resultadoHexadecimal" type="text" disabled />
+        </div>
+    </div>
+
+    <div class="artigo">
+        <img src="https://media.istockphoto.com/id/178366909/pt/foto/sherlock-holmes-silhueta.jpg?s=612x612&w=0&k=20&c=lxcTk21qoLVpNmBdaU-5njlHGTd2C_CuB9afUy8dsHs=">
+         </div>
+
+    <div class="artigo">
+        <h2>Artigo 1: A Arte da Dedução Numérica</h2>
+        <p>Em um mundo onde os números reinam, a dedução se torna uma ciência essencial. A habilidade de converter entre diferentes bases numéricas é semelhante ao processo de resolução de um mistério.</p>
+        <p>Tal como Sherlock Holmes decifra pistas, nós também deciframos números, transformando-os de uma forma a outra, buscando verdades ocultas em cada dígito.</p>
+    </div>
+
+    <div class="artigo">
+        <h2>Artigo 2: A Natureza do Sistema Binário</h2>
+        <p>O sistema binário é o idioma dos computadores, onde 0 e 1 dançam em uma coreografia de lógica. Cada bit é uma pista que, quando unida, revela um segredo profundo sobre o funcionamento das máquinas.</p>
+        <p>Assim como Holmes utiliza seu intelecto, nós também utilizamos nossa lógica para traduzir informações de um formato a outro, revelando a essência dos dados.</p>
+    </div>
+
+   
+    <div class="artigo">
+        <h2>Artigo 3: Hexadecimal e sua Complexidade</h2>
+        <p>O sistema hexadecimal, com sua combinação de números e letras, é um verdadeiro enigma. Representando grandes valores de forma compacta, ele é vital na programação moderna.</p>
+        <p>Tal como uma boa investigação, a conversão para hexadecimal exige atenção aos detalhes e raciocínio claro. Cada letra representa um valor, assim como cada pista pode ser crucial para a resolução de um caso.</p>
+    </div>
+
+    <script>
+        function converter() {
+            const entrada = document.getElementById('entrada').value.toUpperCase();
+            const base = document.getElementById('base').value;
+
+            document.getElementById('resultadoDecimal').value = '';
+            document.getElementById('resultadoOctal').value = '';
+            document.getElementById('resultadoBinario').value = '';
+            document.getElementById('resultadoHexadecimal').value = '';
+
+            if (entrada.length === 0) {
+                alert('Por favor, insira um número válido.');
+                return;
+            }
+
+            var decimal;
+            switch (base) {
+                case 'decimal':
+                    decimal = parseInt(entrada, 10);
+                    if (isNaN(decimal)) {
+                        alert('Por favor, insira um número decimal válido.');
+                        return;
+                    }
+                    break;
+                case 'octal':
+                    decimal = parseInt(entrada, 8);
+                    if (isNaN(decimal)) {
+                        alert('Por favor, insira um número octal válido.');
+                        return;
+                    }
+                    break;
+                case 'binario':
+                    decimal = parseInt(entrada, 2);
+                    if (isNaN(decimal)) {
+                        alert('Por favor, insira um número binário válido.');
+                        return;
+                    }
+                    break;
+                case 'hexadecimal':
+                    if (/^[0-9A-F]+$/.test(entrada)) {
+                        decimal = parseInt(entrada, 16);
+                    } else {
+                        alert('Por favor, insira um valor hexadecimal válido.');
+                        return;
+                    }
+                    break;
+                default:
+                    alert('Base selecionada inválida.');
+                    return;
+            }
+
+            document.getElementById('resultadoDecimal').value = decimal;
+            document.getElementById('resultadoOctal').value = decimal.toString(8);
+            document.getElementById('resultadoBinario').value = decimal.toString(2);
+            document.getElementById('resultadoHexadecimal').value = decimal.toString(16).toUpperCase();
+        }
+    </script>
+</body>
+</html>
